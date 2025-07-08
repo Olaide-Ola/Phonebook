@@ -60,7 +60,7 @@ namespace Phonebook
                         var contactToUpdate = contactServices.UpdateContact();
                         if (contactToUpdate != null)
                         {
-                            Console.WriteLine("=====================");
+                            Console.WriteLine("======================");
                             Console.Write("Enter the new first name: ");
                             string? newFirstName = Console.ReadLine();
 
