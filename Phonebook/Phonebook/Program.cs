@@ -9,12 +9,12 @@ namespace Phonebook
             ContactServices contactServices = new ContactServices();
 
             Console.WriteLine("Welcome to contact menu\n" +
-                "1. Add Contacts\n" +
+                "1. Add a New Contact\n" +
                 "2. View all Contacts\n" +
-                "3. Delete Contact\n" +
-                "4. Update Contact\n" +
-                "5. Search for Contacts by Matching names\n" +
-                "6. Search for contacts using Phone Number\n" +
+                "3. Delete a Contact\n" +
+                "4. Update an Existing Contact\n" +
+                "5. Search for Contacts by matching names\n" +
+                "6. Search for contacts using phone number\n" +
                 "7. Exit");
 
             while (true)

@@ -12,14 +12,14 @@ namespace Contacts.Services
             Contact contact = new Contact();
             do
             {
-                Console.Write("Your first name: ");
+                Console.Write("Enter contact first name: ");
                 string? userFirstName = Console.ReadLine();
                 if (!string.IsNullOrWhiteSpace(userFirstName))
                 {
                     contact.FirstName = userFirstName;
                     while (true)
                     {
-                        Console.Write("Your last name: ");
+                        Console.Write("Enter contact last name: ");
                         string? userLastName = Console.ReadLine();
                         if (!string.IsNullOrWhiteSpace(userLastName))
                         {
@@ -27,12 +27,13 @@ namespace Contacts.Services
 
                             while (true)
                             {
-                                Console.Write("Your phone number: ");
+                                Console.Write("Enter phone number: ");
                                 string? userPhonenumber = Console.ReadLine();
                                 if (!string.IsNullOrWhiteSpace(userPhonenumber))
                                 {
                                     contact.PhoneNumber = userPhonenumber;
                                     _contact.Add(contact);
+                                    Console.WriteLine("Contact added successfully");
                                     break;
                                 }
                                 else
