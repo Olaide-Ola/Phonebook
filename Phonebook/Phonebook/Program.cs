@@ -57,27 +57,27 @@ namespace Phonebook
                         break;
 
                     case "4":
-                        var result = contactServices.UpdateContact();
-                        if (result != null)
+                        var contactToUpdate = contactServices.UpdateContact();
+                        if (contactToUpdate != null)
                         {
                             Console.WriteLine("=====================");
                             Console.Write("Enter the new first name: ");
                             string? newFirstName = Console.ReadLine();
 
                             if (!string.IsNullOrWhiteSpace(newFirstName))
-                                result.FirstName = newFirstName;
+                                contactToUpdate.FirstName = newFirstName;
                             else Console.WriteLine($"{nameof(newFirstName)} cannot be blank.");
 
                             Console.Write("Enter the new second name: ");
                             string? newSecondName = Console.ReadLine();
                             if (!string.IsNullOrWhiteSpace(newSecondName))
-                                result.LastName = newSecondName;
+                                contactToUpdate.LastName = newSecondName;
                             else Console.WriteLine($"{nameof(newSecondName)} cannot be blank");
 
                             Console.Write("Enter new phone number: ");
                             string? newPhonenumber = Console.ReadLine();
                             if (!string.IsNullOrWhiteSpace(newPhonenumber))
-                                result.PhoneNumber = newPhonenumber;
+                                contactToUpdate.PhoneNumber = newPhonenumber;
                             else Console.WriteLine($"{nameof(newPhonenumber)} cannot be blank");
 
                             Console.WriteLine("Conttact updated successfully.");
