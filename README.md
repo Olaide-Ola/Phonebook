@@ -40,3 +40,4 @@ dotnet run
 * Search for Contacts by matching names
 * Search for contacts using phone number
 * Exit
+## Project Structure
