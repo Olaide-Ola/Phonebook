@@ -53,7 +53,7 @@ namespace Phonebook
                             contact.PhoneNumber = contactPhonenumber;
                         }
                         contactServices.DeleteContact(contact);
-                        Console.WriteLine("Contact deleted successfuly.");
+                        Console.WriteLine("Contact deleted successfully.");
                         break;
 
                     case "4":
@@ -80,11 +80,11 @@ namespace Phonebook
                                 contactToUpdate.PhoneNumber = newPhonenumber;
                             else Console.WriteLine($"{nameof(newPhonenumber)} cannot be blank");
 
-                            Console.WriteLine("Conttact updated successfully.");
+                            Console.WriteLine("Contact updated successfully.");
                         }
                         break;
                     case "5":
-                        contactServices.SearchContactsByMacthingName();
+                        contactServices.SearchContactsByMatchingName();
                         break;
                     case "6":
                         contactServices.SearchContactByPhoneNumber();

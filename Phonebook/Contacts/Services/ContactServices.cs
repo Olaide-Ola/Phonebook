@@ -107,7 +107,7 @@ namespace Contacts.Services
             } while (true);
         }
 
-        public void SearchContactsByMacthingName()
+        public void SearchContactsByMatchingName()
         {
             Console.Write("Enter the name: ");
             string? userInput = Console.ReadLine();

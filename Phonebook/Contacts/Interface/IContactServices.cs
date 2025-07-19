@@ -12,7 +12,7 @@ namespace Contacts.Interface
         void AddContacts();
         void ViewAllContacts();
         void SearchContactByPhoneNumber();
-        void SearchContactsByMacthingName();
+        void SearchContactsByMatchingName();
         void DeleteContact(Contact contact);
         Contact UpdateContact();
     }
