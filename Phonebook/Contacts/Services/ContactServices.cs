@@ -85,28 +85,26 @@ namespace Contacts.Services
         }
         public Contact UpdateContact()
         {
-            Console.Write("Enter the contact's first name: ");
-            string? userInputFirstName = Console.ReadLine();
-
-            Console.Write("Enter the contact's last name: ");
-            string? userInputLastName = Console.ReadLine();
-
-            Console.Write("Enter the contact's phone number: ");
-            string? userPhoneNumber = Console.ReadLine();
-
-
-            Contact? contactUpdate = _contact.FirstOrDefault(x => x.FirstName == userInputFirstName && x.LastName == userInputLastName && x.PhoneNumber == userPhoneNumber);
-            if (contactUpdate == null)
+            do
             {
-                Console.WriteLine("Contact not found!");
-                return null;
-            }
-            else
-            {
+                Console.Write("Enter the contact's first name: ");
+                string? userInputFirstName = Console.ReadLine();
 
-                return contactUpdate;
-            }
+                Console.Write("Enter the contact's last name: ");
+                string? userInputLastName = Console.ReadLine();
 
+                Console.Write("Enter the contact's phone number: ");
+                string? userPhoneNumber = Console.ReadLine();
+
+
+                Contact? contactUpdate = _contact.FirstOrDefault(x => x.FirstName == userInputFirstName && x.LastName == userInputLastName && x.PhoneNumber == userPhoneNumber);
+                if (contactUpdate == null)
+                {
+                    Console.WriteLine("Contact not found!");               
+                    continue;
+                }
+                return contactUpdate;  
+            } while (true);
         }
 
         public void SearchContactsByMacthingName()

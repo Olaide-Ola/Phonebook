@@ -1,5 +1,5 @@
 # PhoneBook Console Application
-A simple, efficient console-based phone book application built with C# that allows users to manage their contacts with full CRUD (Create, Read, Update, Delete) operations.
+A simple, console-based phonebook application built with C# (.NET) to store and manage contacts.
 ## Features
 - Add Contacts: Store new contacts with name and phone number
 - View Contacts: Display all contacts or search for specific ones
@@ -7,8 +7,8 @@ A simple, efficient console-based phone book application built with C# that allo
 - Delete Contacts: Remove contacts from the phone book
 - Search Functionality: Find contacts by name or phone number
 - ## Prerequisities
-- .NET 6.0 or later
--Visual Studio 2022 or Visual Studio Code
+- .NET 6.0 SDK
+- Visual Studio 2022 or Visual Studio Code
 - ## Installation
 1. Clone the repository
 ```
@@ -41,3 +41,17 @@ dotnet run
 * Search for contacts using phone number
 * Exit
 ## Project Structure
+```
+|__	Contacts/					# Core domain logic
+	|__	Interface/
+		|__	IContactServices.cs		# Abstraction contracts
+	|__	Model/
+		|__	Contact.cs			# Contact data model
+	|__	Services/
+		|__	ContactServices.cs		# Logic class
+|__	Phonebook/
+	|__	Program.cs				# Main application entry
+
+		
+		
+	
